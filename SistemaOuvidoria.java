@@ -1,5 +1,5 @@
-package br.com.SistemaOuvidoria.terminal.opcoes;
-
+package br.com.SistemaOuvidoria.terminal.sistema;
+import br.com.SistemaOuvidoria.terminal.opcoes.*;
 import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
@@ -21,7 +21,7 @@ public class SistemaOuvidoria {
 			} else if (opcao == 2) {
 				OpcaoAdicionar.adicionarOcorrencias(listaOcorrencias);
 			} else if (opcao == 3) {
-				OpcaoRemover.pesquisarRemover(listaOcorrencias);
+				OpcaoRemover.pesquisarERemoverOcorrencias(listaOcorrencias);
 			} else if (opcao != 4) {
 				JOptionPane.showMessageDialog(null, "- Opção Inválida");
 			}

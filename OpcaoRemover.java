@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 
 public class OpcaoRemover {
 
-	public static void pesquisarRemover(ArrayList<String> listaOcorrencias) {
+	public static void pesquisarERemoverOcorrencias(ArrayList<String> listaOcorrencias) {
 		if (listaOcorrencias.size() > 0) {
 			String ocorrencias = "- Lista de Ocorrências:\n";
 			for (int i = 0; i < listaOcorrencias.size(); i++) {

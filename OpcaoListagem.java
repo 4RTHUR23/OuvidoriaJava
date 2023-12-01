@@ -7,7 +7,7 @@ public class OpcaoListagem {
 
 	public static void exibirOcorrencias(ArrayList<String> listaOcorrencias) {
 		if (listaOcorrencias.size() > 0) {
-			String ocorrencias = "- Lista de Ocorrências:\n";
+			String ocorrencias = "- Lista de Ocorrências:\n"; 
 			for (String ocorrencia : listaOcorrencias) {
 				ocorrencias += "- " + ocorrencia + "\n";
 			}
