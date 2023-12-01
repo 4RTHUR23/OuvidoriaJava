@@ -1,5 +1,5 @@
-package br.com.SistemaOuvidoria.terminal.opcoes;
-
+package br.com.SistemaOuvidoria.terminal.sistema;
+import br.com.SistemaOuvidoria.terminal.opcoes.*;
 import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
