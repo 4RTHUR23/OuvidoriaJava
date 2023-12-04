@@ -17,7 +17,7 @@ public class SistemaOuvidoria {
 			opcao = Integer.parseInt(input);
 
 			if (opcao == 1) {
-				OpcaoListagem.exibirOcorrencias(listaOcorrencias);
+				OpcaoListagem.listarOcorrencias(listaOcorrencias);
 			} else if (opcao == 2) {
 				OpcaoAdicionar.adicionarOcorrencias(listaOcorrencias);
 			} else if (opcao == 3) {
