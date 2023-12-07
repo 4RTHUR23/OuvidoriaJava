@@ -2,7 +2,7 @@ package br.com.Ouvidoria;
 
 import java.util.ArrayList;
 
-public class FuncoesOuvidoria {
+public class Ouvidoria {
 
 	private ArrayList<String> listaOcorrencias = new ArrayList<String>();
 
