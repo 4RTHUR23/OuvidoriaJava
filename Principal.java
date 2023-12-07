@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 public class Principal {
 
     public static void main(String[] args) {
-        FuncoesOuvidoria ouvidoria = new FuncoesOuvidoria();
+        Ouvidoria ouvidoria = new Ouvidoria();
         int opcao = 0;
 
         while (opcao != 5) {
