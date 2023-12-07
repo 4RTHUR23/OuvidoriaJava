@@ -2,7 +2,7 @@ package br.com.Ouvidoria;
 
 import javax.swing.JOptionPane;
 
-public class Ouvidoria {
+public class Principal {
 
     public static void main(String[] args) {
         FuncoesOuvidoria ouvidoria = new FuncoesOuvidoria();
