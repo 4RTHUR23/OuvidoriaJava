@@ -2,67 +2,42 @@ package br.com.Ouvidoria;
 
 import java.util.ArrayList;
 
-import javax.swing.JOptionPane;
-
 public class FuncoesOuvidoria {
 
+	private ArrayList<String> listaOcorrencias = new ArrayList<String>();
 
-	public static void listarOcorrencias(ArrayList<String> listaOcorrencias) {
+	public String listarOcorrencias() {
 		if (listaOcorrencias.size() > 0) {
 			String ocorrencias = "- Lista de Ocorrências:\n";
 			for (String ocorrencia : listaOcorrencias) {
 				ocorrencias += "- " + ocorrencia + "\n";
 			}
-			JOptionPane.showMessageDialog(null, ocorrencias);
+			return ocorrencias;
 		} else {
-			JOptionPane.showMessageDialog(null, "- Não há ocorrências registradas.");
+			return "- Não há ocorrências registradas.";
 		}
 	}
 
-	public static void adicionarOcorrencias(ArrayList<String> listaOcorrencias) {
-
-		String novaOcorrencia = JOptionPane.showInputDialog("- Digite a nova Ocorrência:");
+	public String adicionarOcorrencias(String novaOcorrencia) {
 		listaOcorrencias.add(novaOcorrencia);
-		JOptionPane.showMessageDialog(null, "- Ocorrência adicionada com sucesso!");
-
+		return "- Ocorrência adicionada com sucesso!";
 	}
 
-	public static void pesquisarERemoverOcorrencias(ArrayList<String> listaOcorrencias) {
-		if (listaOcorrencias.size() > 0) {
-			String ocorrencias = "- Lista de Ocorrências:\n";
-			for (int i = 0; i < listaOcorrencias.size(); i++) {
-				ocorrencias += "- Código " + (i + 1) + " corresponde à ocorrência: " + listaOcorrencias.get(i) + "\n";
-			}
-			JOptionPane.showMessageDialog(null, ocorrencias);
-
-			String codigoExclusaoStr = JOptionPane
-					.showInputDialog("- Digite o código da ocorrência que deseja excluir:");
-			int codigoExclusao = Integer.parseInt(codigoExclusaoStr);
-
-			if (codigoExclusao >= 1 && codigoExclusao <= listaOcorrencias.size()) {
-				listaOcorrencias.remove(codigoExclusao - 1);
-				JOptionPane.showMessageDialog(null, "- Ocorrência excluída com sucesso!");
-			} else {
-				JOptionPane.showMessageDialog(null, "- Código de ocorrência inválido.");
-			}
+	public String RemoverOcorrencias(int codigoExclusao) {
+		if (codigoExclusao >= 1 && codigoExclusao <= listaOcorrencias.size()) {
+			listaOcorrencias.remove(codigoExclusao - 1);
+			return "- Ocorrência excluída com sucesso!";
 		} else {
-			JOptionPane.showMessageDialog(null, "- Não há ocorrências registradas.");
+			return "- Código da ocorrência inexistente.";
 		}
 	}
 
-	public static void pesquisarOcorrenciaPeloCodigo(ArrayList<String> listaOcorrencias) {
-		if (listaOcorrencias.size() > 0) {
-			String codigoParaPesquisaSTR = JOptionPane.showInputDialog("- Digite o código da ocorrência:");
-			int codigo = Integer.parseInt(codigoParaPesquisaSTR);
-
-			if (codigo >= 1 && codigo <= listaOcorrencias.size()) {
-				String ocorrenciaEncontrada = listaOcorrencias.get(codigo - 1);
-				JOptionPane.showMessageDialog(null, "Ocorrência encontrada:\n" + ocorrenciaEncontrada);
-			} else {
-				JOptionPane.showMessageDialog(null, "Ocorrência não encontrada para o código: " + codigo);
-			}
+	public String pesquisarOcorrenciaPeloCodigo(int codigoParaPesquisa) {
+		if (codigoParaPesquisa >= 1 && codigoParaPesquisa <= listaOcorrencias.size()) {
+			String ocorrenciaEncontrada = listaOcorrencias.get(codigoParaPesquisa - 1);
+			return "Ocorrência encontrada:\n" + ocorrenciaEncontrada;
 		} else {
-			JOptionPane.showMessageDialog(null, "- Não há ocorrências registradas.");
+			return "Ocorrência não encontrada para o código: " + codigoParaPesquisa;
 		}
 
 	}
