@@ -12,7 +12,7 @@
 <h2>👉Como Utilizar o Sistema</h1>
 <p>- Antes de tentar rodar o Sistema de Ouvidoria, certifique-se de alguns pontos importantes, segue abaixo:</p>
 <p>• Eclipse devidamente instalado e funcionando</p>
-<p>• Git istalado na sua máquina</p>
+<p>• Git instalado na sua máquina</p>
 <p>- Após esses passos atente-se a algumas instruçoes</p>
 <p>Para o funcionamento do projeto, você deve utilizar os 4 arquivos principais, contendo as suas respectivas opções e o Sistema de Ouvidoria, e após isso começar a usar.</p>
 <h2>👉Grupo</h1>
