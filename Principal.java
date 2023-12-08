@@ -18,9 +18,17 @@ public class Principal {
             	String listagem = ouvidoria.listarOcorrencias();
                 JOptionPane.showMessageDialog(null, listagem);
             } else if (opcao == 2) {
-            	String novaOcorrencia = JOptionPane.showInputDialog("- Digite a nova Ocorrência:");
-                String adicionando = ouvidoria.adicionarOcorrencias(novaOcorrencia);
-                JOptionPane.showMessageDialog(null, adicionando);
+            	String tipoOcorrencia = JOptionPane.showInputDialog("- Digite o tipo da ocorrência (Elogio) (Sugestão) (Reclamação):");
+            	String autorOcorrencia = JOptionPane.showInputDialog("- Digite o autor da ocorrência:");
+            	
+            	String novoProtocoloSTR = JOptionPane.showInputDialog("- Digite o protocolo da ocorrência:");
+            	int novoProtocolo = Integer.parseInt(novoProtocoloSTR);
+            	
+            	String descricaoDaOcorrencia = JOptionPane.showInputDialog("- Digite a sua ocorrência:");
+            	
+            	Ocorrencias novaOcorrencia = new Ocorrencias(novoProtocolo, tipoOcorrencia, autorOcorrencia, descricaoDaOcorrencia);
+            	String adicionando = ouvidoria.adicionarOcorrencias(novaOcorrencia);
+            	JOptionPane.showMessageDialog(null, adicionando);
             } else if (opcao == 3) {
             	String codigoExclusaoSTR = JOptionPane.showInputDialog("Digite o código da ocorrência para Remover:");
             	int codigoExclusao = Integer.parseInt(codigoExclusaoSTR);
